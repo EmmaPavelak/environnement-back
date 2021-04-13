@@ -20,11 +20,14 @@
   },
   "homepage": "https://gitlab.com/ynov-toulouse-ingesup/nodejs-b3-2020-2021#readme",
   "dependencies": {
+    "compression": "^1.7.4",
     "express": "^4.17.1",
+    "helmet": "^4.4.1",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.5.0"
+    "sequelize": "^6.5.0",
+    "sha1": "^1.1.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

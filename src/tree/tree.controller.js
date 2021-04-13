@@ -1,20 +1,20 @@
-const characterService = require('./character.service');
+const treeService = require('./tree.service');
 
 const findAll = (request, response, next) => {
-  characterService.findAll()
+  treeService.findAll()
     .then(dtos => response.json(dtos))
     .catch(next);
 };
 
 const get = (request, response, next) => {
   const id = Number(request.params.id);
-  characterService.get(id)
+  treeService.get(id)
     .then(dto => response.json(dto))
     .catch(next);
 };
 
 const create = (request, response, next) => {
-  characterService.save(request.body)
+  treeService.save(request.body)
     .then(dto => {
       response.status(201);
       response.json(dto);
@@ -24,14 +24,14 @@ const create = (request, response, next) => {
 
 const update = (request, response, next) => {
   const id = Number(request.params.id);
-  characterService.save(request.body, id)
+  treeService.save(request.body, id)
     .then(dto => response.json(dto))
     .catch(next);
 };
 
 const remove = (request, response, next) => {
   const id = Number(request.params.id);
-  characterService.remove(id)
+  treeService.remove(id)
     .then(() => {
       response.status(204);
       response.json();

@@ -6,6 +6,21 @@ const findByCredentials = (username, password) => {
   return UserModel.findOne({ having: { username, password }, rejectOnEmpty: false });
 };
 
+const findAll = () => {
+  return UserModel.findAll();
+};
+
+const getById = id => {
+  return UserModel.findByPk(id)
+    .then(model => {
+      if (model) {
+        return model;
+      } else {
+        return Promise.reject({ type: RESOURCE_ID_NOT_FOUND, param: id });
+      }
+    })
+};
+
 const create = model => {
   return UserModel.create(model)
     .catch(error => {
@@ -42,5 +57,7 @@ module.exports = {
   findByCredentials,
   create,
   update,
-  remove
+  remove,
+  findAll,
+  getById
 }

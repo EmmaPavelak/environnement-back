@@ -21,6 +21,26 @@ const attributes = {
   password: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  tel: {
+    type: DataTypes.INTEGER,
+    allowNull: true
+  },
+  address: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  birthDate: {
+    type: DataTypes.DATE,
+    allowNull: true
+  },
+  role: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  points: {
+    type: DataTypes.INTEGER,
+    allowNull: true
   }
 };
 
