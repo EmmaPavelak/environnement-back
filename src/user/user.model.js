@@ -33,7 +33,6 @@ const attributes = {
   birthDate: {
     type: DataTypes.DATE,
     allowNull: true
-<<<<<<< HEAD:src/user/user.model.js
   },
   role: {
     type: DataTypes.STRING,
@@ -42,8 +41,6 @@ const attributes = {
   points: {
     type: DataTypes.INTEGER,
     allowNull: true
-=======
->>>>>>> 4b801ec47fa772fb668bfae52ec0a971f8936ef8:src/auth/user.model.js
   }
 };
 
