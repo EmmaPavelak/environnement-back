@@ -8,8 +8,8 @@ var sha1 = require('sha1');
 class AuthService {
   login(credentials) {
     return repository.findByCredentials(credentials.username, sha1(credentials.password))
-      .then(user => {
-        if (user) {
+      .then(user => {   
+        if (user) {   
           return tokenService.generateToken(mapper.toDto(user))
         }
         return Promise.reject({ type: INVALID_CREDENTIALS });

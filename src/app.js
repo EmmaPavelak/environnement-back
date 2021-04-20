@@ -11,6 +11,7 @@ const errorMiddleware = require('./common/error/error.middleware');
 
 const app = express();
 
+
 app.use(cors());
 
 app.use(helmet());

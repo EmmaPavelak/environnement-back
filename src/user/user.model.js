@@ -41,6 +41,10 @@ const attributes = {
   points: {
     type: DataTypes.INTEGER,
     allowNull: true
+  },
+  registration: {
+    type: DataTypes.DATE,
+    allowNull: true
   }
 };
 

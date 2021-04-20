@@ -12,6 +12,7 @@ const generateToken = payload => {
       }
     });
   });
+  
 };
 
 const tokenIsValid = token => {

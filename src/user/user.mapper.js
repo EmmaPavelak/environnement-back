@@ -16,7 +16,8 @@ const toDto = model => ({
   address:model.address,
   birthDate:model.birthDate,
   role:model.role,
-  points:model.points
+  points:model.points,
+  registration:model.registration
 });
 
 const toModels = dtos => dtos

@@ -2,9 +2,10 @@ const service = require('./user.service');
 
 const login = (request, response, next) => {
   service.login(request.body)
-    .then(token => response.json({
-      token
-    }))
+    .then(token => {
+      response.status(200);
+      response.json({token});    
+    })     
     .catch(next);
 };
 
