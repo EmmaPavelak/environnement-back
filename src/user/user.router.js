@@ -10,8 +10,8 @@ router.post('/login', controller.login);
 router.get('/users', (request, response, next) => controller.findAll(request, response, next));
 router.get('/users/:id', checkIdParamMiddleware, (request, response, next) => controller.getById(request, response, next));
 router.post('/registration', (request, response, next) => controller.registration(request, response, next));
-router.put('/:id', checkIdParamMiddleware, (request, response, next) => controller.update(request, response, next)); //authenticationMiddleware, 
-router.delete('/:id', authenticationMiddleware, authorizationMiddleware('ADMIN'), checkIdParamMiddleware, (request, response, next) => controller.remove(request, response, next));
+router.put('/:id', authenticationMiddleware, checkIdParamMiddleware, (request, response, next) => controller.update(request, response, next)); 
+router.delete('/:id', authenticationMiddleware, authorizationMiddleware('Administrateur'), checkIdParamMiddleware, (request, response, next) => controller.remove(request, response, next));
 
 
 

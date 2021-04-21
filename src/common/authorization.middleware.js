@@ -6,6 +6,7 @@ const authorizationMiddleware = role => (request, response, next) => {
   } else {
     next({ type: MISSING_AUTHORIZATION })
   }
+  console.log(request.user);
 };
 
 module.exports = authorizationMiddleware;
