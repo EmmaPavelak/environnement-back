@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('environnement', 'root', 'Lou974Lou!', {
-  host: 'localhost',
+const sequelize = new Sequelize('environment_toto', 'env_admin', 'cE5tP0pR2sxH0e', {
+  host: 'btcv.fr',
   dialect: 'mysql'
 });
 
